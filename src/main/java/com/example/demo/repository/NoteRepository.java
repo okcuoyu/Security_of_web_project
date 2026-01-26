@@ -10,10 +10,10 @@ import java.util.Optional;
 
 public interface NoteRepository extends JpaRepository<Note, Long> {
 
-    // LAB 12: Ownership enforced via user_id
+
     Optional<Note> findByIdAndUserId(Long id, Long userId);
 
-    // LAB 12: Custom parameterized query (prepared statement equivalent)
+
     @Query("SELECT n FROM Note n WHERE n.user.id = :userId")
     List<Note> findAllByUserId(@Param("userId") Long userId);
 }

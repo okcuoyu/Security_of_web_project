@@ -19,12 +19,12 @@ public class AdminController {
     @GetMapping("/users")
     public String listUsers(Model model) {
         model.addAttribute("users", userService.getAllUsers());
-        return "admin/users"; // templates/admin/users.html dosyasını açacak
+        return "admin/users";
     }
 
     @org.springframework.web.bind.annotation.PostMapping("/users/{id}/delete")
     public String deleteUser(@org.springframework.web.bind.annotation.PathVariable Long id) {
         userService.deleteUser(id);
-        return "redirect:/admin/users"; // Sildikten sonra listeyi yenile
+        return "redirect:/admin/users";
     }
 }

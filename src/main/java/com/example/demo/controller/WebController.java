@@ -25,30 +25,28 @@ public class WebController {
         this.userService = userService;
     }
 
-    // Login Sayfası
+
     @GetMapping("/login")
     public String showLoginForm() {
         return "login";
     }
 
-    // Kayıt Formu
     @GetMapping("/register")
     public String showRegisterForm(Model model) {
         model.addAttribute("user", new CreateUserRequest());
         return "register";
     }
 
-    // Kayıt İşlemi
+
     @PostMapping("/register")
     public String register(@ModelAttribute("user") @Valid CreateUserRequest req) {
         userService.register(req);
         return "redirect:/login";
     }
 
-    // Ana Sayfa
+
     @GetMapping("/user/home")
     public String userHome(Model model, Principal principal, Authentication authentication) {
-        // DİKKAT: Yukarıdaki parantezin içine 'Authentication authentication' ekledik!
 
         if (principal != null) {
             model.addAttribute("username", principal.getName());

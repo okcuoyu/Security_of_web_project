@@ -4,7 +4,6 @@
     <title>Admin Panel - Users</title>
     <link rel="stylesheet" th:href="@{/css/style.css}">
     <style>
-        /* Tablo için ufak ek stiller */
         table { width: 100%; border-collapse: collapse; margin-top: 20px; }
         th, td { padding: 12px; border-bottom: 1px solid #ddd; text-align: left; }
         th { background-color: #f2f2f2; color: #333; }
@@ -37,8 +36,9 @@
             </span>
             </td>
             <td>
-                <form th:if="${user.username != 'yusufenes'}"
+                <form th:if="${user.role != 'ROLE_ADMIN'}"
                       th:action="@{/admin/users/{id}/delete(id=${user.id})}" method="post">
+
                     <button type="submit" class="btn-danger" style="padding: 5px 10px; width: auto; font-size: 12px;">
                         Delete
                     </button>

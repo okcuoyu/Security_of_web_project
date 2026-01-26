@@ -18,13 +18,12 @@ public class CustomLoginSuccessHandler implements AuthenticationSuccessHandler {
                                         HttpServletResponse response,
                                         Authentication authentication) throws IOException, ServletException {
 
-        // Kullanıcının rollerini kontrol et
         boolean isAdmin = authentication.getAuthorities().contains(new SimpleGrantedAuthority("ROLE_ADMIN"));
 
         if (isAdmin) {
-            response.sendRedirect("/admin/users"); // Admin ise buraya
+            response.sendRedirect("/admin/users");
         } else {
-            response.sendRedirect("/user/home");   // Normal kullanıcı ise buraya
+            response.sendRedirect("/user/home");
         }
     }
 }

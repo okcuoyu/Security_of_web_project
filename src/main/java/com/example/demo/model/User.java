@@ -32,15 +32,10 @@ public class User {
     @Column(nullable = false)
     private String role;
 
-    // --- EKLENEN KISIM BAŞLANGIÇ ---
-    // Bir kullanıcının birden fazla notu olabilir.
-    // 'mappedBy = "user"', Note sınıfındaki 'user' alanını işaret eder.
-    // CascadeType.ALL: Kullanıcı silinirse notları da silinsin.
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Note> notes = new ArrayList<>();
 
 
-    // getters & setters
     public Long getId() {
         return id;
     }
@@ -81,7 +76,7 @@ public class User {
         this.role = role;
     }
 
-    // Not listesi için getter/setter
+
     public List<Note> getNotes() {
         return notes;
     }

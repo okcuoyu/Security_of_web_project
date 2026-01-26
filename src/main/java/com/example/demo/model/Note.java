@@ -22,20 +22,16 @@ public class Note {
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
-    // --- CONSTRUCTORLAR ---
-
-    // 1. Boş Constructor (JPA için şart)
     public Note() {
     }
 
-    // 2. Dolu Constructor (Service için şart)
     public Note(String title, String content, User user) {
         this.title = title;
         this.content = content;
         this.user = user;
     }
 
-    // --- GETTER & SETTER ---
+
     public Long getId() {
         return id;
     }

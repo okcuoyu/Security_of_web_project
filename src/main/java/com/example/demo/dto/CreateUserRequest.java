@@ -2,20 +2,23 @@ package com.example.demo.dto;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size; // Bu import çok önemli!
 
 public class CreateUserRequest {
 
-    @NotBlank
+    @NotBlank(message = "Username cannot be empty")
+    @Size(min = 3, message = "Username must be at least 3 characters")
     private String username;
 
-    @Email
-    @NotBlank
+    @NotBlank(message = "Email cannot be empty")
+    @Email(message = "Please provide a valid email address")
     private String email;
 
-    @NotBlank
+    @NotBlank(message = "Password cannot be empty")
+    @Size(min = 4, message = "Password must be at least 4 characters")
     private String password;
 
-    // getter-setter
+
     public String getUsername() {
         return username;
     }

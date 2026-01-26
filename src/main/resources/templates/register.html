@@ -12,19 +12,28 @@
 
     <form th:action="@{/register}" th:object="${user}" method="post">
 
+        <div th:if="${error}" style="color: red; margin-bottom: 10px;">
+            <p th:text="${error}"></p>
+        </div>
+
         <div>
             <label for="username">Username:</label>
             <input type="text" th:field="*{username}" id="username" placeholder="Choose a username" required>
+            <div style="color: red; font-size: 0.9em;" th:if="${#fields.hasErrors('username')}"
+                 th:errors="*{username}"></div>
         </div>
 
         <div>
             <label for="email">Email:</label>
             <input type="email" th:field="*{email}" id="email" placeholder="Enter your email" required>
+            <div style="color: red; font-size: 0.9em;" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></div>
         </div>
 
         <div>
             <label for="password">Password:</label>
             <input type="password" th:field="*{password}" id="password" placeholder="Create a password" required>
+            <div style="color: red; font-size: 0.9em;" th:if="${#fields.hasErrors('password')}"
+                 th:errors="*{password}"></div>
         </div>
 
         <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
