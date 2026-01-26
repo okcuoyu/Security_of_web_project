@@ -33,9 +33,17 @@ body {
 }
 
 /* --- BAŞLIKLAR --- */
-h1, h2, h3 {
-    color: #ecf0f1; /* Açık beyaz/gri */
+/* h1 ve h2 Beyaz Kalsın */
+h1, h2 {
+    color: #ecf0f1;
     margin-bottom: 20px;
+}
+
+/* h3 ARTIK YEŞİL OLDU */
+h3 {
+    color: #2ecc71; /* Zümrüt Yeşili */
+    margin-bottom: 20px;
+    font-weight: bold;
 }
 
 /* --- FORM ELEMANLARI --- */
@@ -56,10 +64,27 @@ textarea {
     margin-bottom: 15px;
     border: 1px solid #555;
     background-color: #2c3e50; /* Input içi koyu */
-    color: #fff; /* Yazı beyaz */
+    color: #ffffff !important; /* Yazı BEYAZ */
+    caret-color: #ffffff;      /* Yanıp sönen imleç BEYAZ */
     border-radius: 5px;
     box-sizing: border-box;
     font-family: inherit;
+}
+
+/* PLACEHOLDER RENGİ */
+::placeholder {
+    color: #bdc3c7 !important; /* Açık Gri */
+    opacity: 1;
+}
+
+/* TARAYICI AUTOFILL DÜZELTMESİ */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px #2c3e50 inset !important;
+    -webkit-text-fill-color: white !important;
+    transition: background-color 5000s ease-in-out 0s;
 }
 
 textarea {
@@ -70,6 +95,7 @@ textarea {
 input:focus, textarea:focus {
     border-color: #3498db; /* Mavi odaklanma */
     outline: none;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
 }
 
 /* --- BUTONLAR --- */
@@ -113,7 +139,7 @@ ul {
 
 .note-card {
     background-color: #455a64; /* Kart rengi */
-    border-left: 5px solid #3498db; /* Mavi çizgi */
+    border-left: 5px solid #2ecc71; /* SOL ÇİZGİ DE YEŞİL YAPILDI */
     padding: 15px;
     margin-bottom: 15px;
     border-radius: 4px;
@@ -123,13 +149,14 @@ ul {
 
 .note-title {
     font-size: 18px;
-    color: #ecf0f1;
+    color: #2ecc71; /* NOT BAŞLIĞI DA YEŞİL OLDU */
     margin-bottom: 5px;
     display: block;
+    font-weight: bold;
 }
 
 .note-content {
-    color: #bdc3c7;
+    color: #cfd8dc;
     font-size: 14px;
     line-height: 1.5;
 }

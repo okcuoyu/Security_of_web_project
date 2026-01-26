@@ -5,16 +5,14 @@ import com.example.demo.service.UserService;
 import jakarta.validation.Valid;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-
-
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
 import java.security.Principal;
-
 
 @Controller
 public class WebController {
@@ -24,7 +22,6 @@ public class WebController {
     public WebController(UserService userService) {
         this.userService = userService;
     }
-
 
     @GetMapping("/login")
     public String showLoginForm() {
@@ -37,30 +34,38 @@ public class WebController {
         return "register";
     }
 
-
     @PostMapping("/register")
-    public String register(@ModelAttribute("user") @Valid CreateUserRequest req) {
-        userService.register(req);
+    public String register(@Valid @ModelAttribute("user") CreateUserRequest req,
+                           BindingResult bindingResult,
+                           Model model) {
+        if (bindingResult.hasErrors()) {
+            return "register";
+        }
+        try {
+            userService.register(req);
+        } catch (Exception e) {
+            model.addAttribute("error", e.getMessage());
+            return "register";
+        }
         return "redirect:/login";
     }
 
-
     @GetMapping("/user/home")
     public String userHome(Model model, Principal principal, Authentication authentication) {
-
         if (principal != null) {
             model.addAttribute("username", principal.getName());
         }
-
-        // Admin mi kontrolü
         boolean isAdmin = false;
         if (authentication != null) {
             isAdmin = authentication.getAuthorities()
                     .contains(new SimpleGrantedAuthority("ROLE_ADMIN"));
         }
-
         model.addAttribute("isAdmin", isAdmin);
-
         return "user/home";
+    }
+
+    @GetMapping("/access-denied")
+    public String accessDenied() {
+        return "access-denied";
     }
 }
