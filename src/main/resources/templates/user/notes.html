@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Notlarım</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<div class="container-wide">
+
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+        <h2>My Notes</h2>
+        <form th:action="@{/logout}" method="post" style="margin: 0;">
+            <button type="submit" class="btn-danger" style="width: auto; padding: 8px 15px;">Logout</button>
+        </form>
+    </div>
+
+    <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 30px; border: 1px solid #ddd;">
+        <h3 style="margin-top: 0; font-size: 18px;">Add New Note</h3>
+
+        <form th:action="@{/notes}" method="post">
+            <input type="text" name="title" placeholder="Note Title (e.g. Shopping List)" required>
+            <textarea name="content" placeholder="Write your note content here..." required></textarea>
+
+            <button type="submit" class="btn-success">Save Note</button>
+        </form>
+    </div>
+
+    <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+
+    <h3 th:if="${notes.empty}" class="text-center" style="color: #999;">You don't have any notes yet.</h3>
+
+    <ul>
+        <li th:each="note : ${notes}" class="note-card"
+            style="display: flex; justify-content: space-between; align-items: center;">
+
+            <div style="flex-grow: 1; margin-right: 15px;">
+                <strong class="note-title" th:text="${note.title}">Title</strong>
+                <span class="note-content" th:text="${note.content}">Content</span>
+            </div>
+
+            <div style="display: flex; gap: 10px;">
+
+                <a th:href="@{/notes/{id}/edit(id=${note.id})}">
+                    <button type="button" class="btn-primary" style="padding: 5px 10px; font-size: 12px; width: auto;">
+                        Edit
+                    </button>
+                </a>
+
+                <form th:action="@{/notes/{id}/delete(id=${note.id})}" method="post" style="margin: 0;">
+                    <button type="submit" class="btn-danger" style="padding: 5px 10px; font-size: 12px; width: auto;">
+                        Delete
+                    </button>
+                </form>
+
+            </div>
+        </li>
+    </ul>
+
+    <div class="text-center mt-20">
+        <a th:href="@{/user/home}">Back to Home</a>
+    </div>
+</div>
+
+</body>
+</html>

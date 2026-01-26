@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Welcome, <span th:text="${username}">User</span>!</h1>
+    <p>You have successfully logged in.</p>
+
+    <hr style="border: 0; border-top: 1px solid #eee; margin: 25px 0;">
+
+    <h3>What would you like to do?</h3>
+
+    <a th:href="@{/notes}" style="text-decoration: none;">
+        <button class="btn-primary">📝 Go to My Notes</button>
+    </a>
+
+    <a th:if="${isAdmin}" th:href="@{/admin/users}" style="text-decoration: none;">
+        <button class="btn-danger" style="margin-top: 10px; background: linear-gradient(135deg, #2c3e50, #000000);">
+            👑 Admin Control Panel
+        </button>
+    </a>
+
+    <br><br>
+
+    <form th:action="@{/logout}" method="post" style="margin-top: 10px;">
+        <button type="submit" class="btn-danger">Logout</button>
+    </form>
+
+</div>
+
+</body>
+</html>

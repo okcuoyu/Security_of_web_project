@@ -1,60 +1,73 @@
-Lab 10 – HTTP Implementation with Spring Boot
+# Secure Note-Taking Application (Spring Boot)
 
-This project was created for Lab 10 Hometask to demonstrate how HTTP works in a backend application using Java and Spring Boot.
+It is a secure backend application that allows users to register, log in, and manage their personal notes. It has been
+hardened with advanced security features including session management, secure headers, and protected admin access.
 
-Project Overview
+## 📋 Project Overview
 
-The application is a simple REST-based backend that handles HTTP requests and responses.
-It follows a layered architecture where each layer has a clear responsibility:
+The application is built using **Spring Boot** and follows the MVC (Model-View-Controller) architecture. It uses *
+*SQLite** for data storage and **Spring Security** for authentication and authorization.
 
-Controllers handle HTTP endpoints
+### Key Features
 
-Services contain business logic
+* **User System:** Registration, Login, and Logout functionality.
+* **Note Management:** Users can add, view, and edit their private notes.
+* **Admin Panel:** Special dashboard for admins to view and manage users.
+* **Database Migration:** Automatic table creation using **Flyway**.
+* **Security:** Implements "App Hardening" techniques from Lab 13.
 
-Repositories interact with the database
+## 🛠️ Tech Stack
 
-Models represent database entities
+* **Java 17 & Spring Boot 3**
+* **Spring Security 6**
+* **Thymeleaf** (Frontend Engine)
+* **SQLite** (Embedded Database)
+* **Flyway** (Database Migration)
+* **Maven** (Build Tool)
 
-Project Structure
-src/main/java/com/example/demo
- ├─ Application.java        // Application entry point
- ├─ controller/             // HTTP request handlers
- │   └─ UserController.java
- ├─ service/                // Business logic
- │   └─ UserService.java
- ├─ repository/             // Database access layer
- │   └─ UserRepository.java
- └─ model/                  // Domain models
-     ├─ User.java
-     └─ dto/
-         └─ CreateUserRequest.java
-How It Works
+## 📂 Project Structure
 
-A client sends an HTTP request (e.g. GET or POST).
+The project follows a standard layered architecture:
 
-The request is received by a Controller.
-
-The Controller calls the Service to process business logic.
-
-The Service uses the Repository to read/write data from the database.
-
-A proper HTTP response is returned with status code and body.
-
-Running the Application
-
-Create a .env file with database configuration.
-
-Run the project using:
-
-./mvnw spring-boot:run
-
-The embedded Tomcat server starts automatically.
-
-Example Endpoint
-
-GET /hello
-Returns a simple response to demonstrate the HTTP request–response flow.
-
-Purpose
-
-The main goal is to understand HTTP methods, status codes, and how Spring Boot maps them to Java code.
+```text
+src/main
+ ├─ java/com/example/demo
+ │   ├─ controller/               
+ │   │   ├─ AdminController.java
+ │   │   ├─ NoteController.java
+ │   │   └─ WebController.java
+ │   ├─ dto/                      
+ │   │   ├─ CreateUserRequest.java
+ │   │   └─ NoteRequest.java
+ │   ├─ model/                    
+ │   │   ├─ Note.java
+ │   │   └─ User.java
+ │   ├─ repository/               
+ │   │   ├─ NoteRepository.java
+ │   │   └─ UserRepository.java
+ │   ├─ security/                 
+ │   │   ├─ AuthenticationEvents.java
+ │   │   ├─ CustomLoginSuccessHandler.java
+ │   │   └─ SecurityConfig.java
+ │   ├─ service/                  
+ │   │   ├─ CustomUserDetailsService.java
+ │   │   ├─ NoteService.java
+ │   │   └─ UserService.java
+ │   ├─ DataInitializer.java      
+ │   └─ Lab10Application.java     
+ │
+ └─ resources
+     ├─ db/migration/             
+     │   └─ V1__create_users_table.sql
+     ├─ static/css/               
+     │   └─ style.css
+     ├─ templates/                
+     │   ├─ admin/
+     │   │   └─ users.html
+     │   ├─ user/
+     │   │   ├─ edit_note.html
+     │   │   ├─ home.html
+     │   │   └─ notes.html
+     │   ├─ login.html
+     │   └─ register.html
+     └─ application.properties    

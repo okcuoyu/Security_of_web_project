@@ -3,35 +3,53 @@ package com.example.demo.service;
 import com.example.demo.dto.CreateUserRequest;
 import com.example.demo.model.User;
 import com.example.demo.repository.UserRepository;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import java.util.Optional;
+import java.util.List;
 
 @Service
 public class UserService {
 
     private final UserRepository userRepository;
+    private final PasswordEncoder passwordEncoder;
 
-    public UserService(UserRepository userRepository) {
+    public UserService(UserRepository userRepository,
+                       PasswordEncoder passwordEncoder) {
         this.userRepository = userRepository;
+        this.passwordEncoder = passwordEncoder;
     }
 
-    // Kullanıcı oluşturma
-    public User createUser(CreateUserRequest req) {
+    // KAYIT OLMA İŞLEMİ (WebController kullanıyor)
+    public void register(CreateUserRequest req) {
+        // Aynı kullanıcı adında biri var mı kontrolü (Opsiyonel ama iyi olur)
+        if (userRepository.findByUsername(req.getUsername()).isPresent()) {
+            throw new RuntimeException("Username already taken!");
+        }
+
         User user = new User();
         user.setUsername(req.getUsername());
         user.setEmail(req.getEmail());
-        user.setPassword(req.getPassword());
-        return userRepository.save(user);
+        // Şifreyi şifreleyerek kaydet (BCrypt)
+        user.setPassword(passwordEncoder.encode(req.getPassword()));
+        user.setRole("ROLE_USER");
+
+        userRepository.save(user);
     }
 
-    // Kullanıcı login/authenticate metodu
-    public boolean authenticate(String email, String password) {
-        Optional<User> userOpt = userRepository.findByEmail(email);
-        if (userOpt.isEmpty()) return false;
+    // YARDIMCI METOT (Gerekirse kullanıcıyı bulmak için)
+    public User findByUsername(String username) {
+        return userRepository.findByUsername(username)
+                .orElseThrow(() -> new RuntimeException("User not found"));
+    }
 
-        User user = userOpt.get();
-        // Basit kontrol: password eşleşiyor mu
-        return user.getPassword().equals(password);
+    // Admin paneli için tüm kullanıcıları getir
+    public List<User> getAllUsers() {
+        return userRepository.findAll();
+    }
+
+    // Kullanıcıyı ID ile sil
+    public void deleteUser(Long id) {
+        userRepository.deleteById(id);
     }
 }

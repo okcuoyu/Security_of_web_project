@@ -1,0 +1,142 @@
+/* --- DARK MODE (KOYU TEMA) --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #2c3e50, #000000); /* Koyu gri/siyah geçiş */
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #e0e0e0;
+}
+
+/* --- KART TASARIMI --- */
+.container {
+    background-color: #34495e; /* Koyu Gri Kutu */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5); /* Daha belirgin gölge */
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.container-wide {
+    background-color: #34495e; /* Koyu Gri Kutu */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    width: 100%;
+    max-width: 800px;
+}
+
+/* --- BAŞLIKLAR --- */
+h1, h2, h3 {
+    color: #ecf0f1; /* Açık beyaz/gri */
+    margin-bottom: 20px;
+}
+
+/* --- FORM ELEMANLARI --- */
+label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    color: #bdc3c7; /* Açık gri */
+    font-weight: 600;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #555;
+    background-color: #2c3e50; /* Input içi koyu */
+    color: #fff; /* Yazı beyaz */
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+input:focus, textarea:focus {
+    border-color: #3498db; /* Mavi odaklanma */
+    outline: none;
+}
+
+/* --- BUTONLAR --- */
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+/* Mavi Buton */
+.btn-primary {
+    background: linear-gradient(135deg, #2980b9, #3498db);
+}
+
+/* Koyu Kırmızı */
+.btn-danger {
+    background: linear-gradient(135deg, #c0392b, #e74c3c);
+}
+
+/* Zümrüt Yeşili */
+.btn-success {
+    background: linear-gradient(135deg, #27ae60, #2ecc71);
+}
+
+/* --- NOT LİSTESİ TASARIMI --- */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.note-card {
+    background-color: #455a64; /* Kart rengi */
+    border-left: 5px solid #3498db; /* Mavi çizgi */
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    text-align: left;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.note-title {
+    font-size: 18px;
+    color: #ecf0f1;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.note-content {
+    color: #bdc3c7;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Linkler */
+a { color: #3498db; text-decoration: none; font-weight: bold; }
+a:hover { text-decoration: underline; color: #5dade2; }
+
+.text-center { text-align: center; }
+.mt-20 { margin-top: 20px; }
