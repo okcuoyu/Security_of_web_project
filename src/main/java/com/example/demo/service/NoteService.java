@@ -6,10 +6,12 @@ import com.example.demo.repository.NoteRepository;
 import com.example.demo.repository.UserRepository;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 @Service
+@Transactional
 public class NoteService {
 
     private final NoteRepository noteRepository;
@@ -20,13 +22,11 @@ public class NoteService {
         this.userRepository = userRepository;
     }
 
-    //Kullanıcının notlarını getir
-    public List<Note> getNotesForUser(String username) {
-        User user = userRepository.findByUsername(username)
-                .orElseThrow(() -> new UsernameNotFoundException("User not found: " + username));
 
-        return noteRepository.findAllByUserId(user.getId());
+    public List<Note> getNotesForUser(String username) {
+        return noteRepository.findAllByUserUsername(username);
     }
+
 
     public void createNote(String username, String title, String content) {
         User user = userRepository.findByUsername(username)
@@ -41,29 +41,15 @@ public class NoteService {
     }
 
 
-    public void deleteNote(Long noteId, String username) {
-        Note note = noteRepository.findById(noteId)
-                .orElseThrow(() -> new RuntimeException("Note not found"));
-
-
-        if (note.getUser().getUsername().equals(username)) {
-            noteRepository.delete(note);
-        } else {
-            throw new RuntimeException("You are not allowed to delete this note!");
-        }
-    }
-
-
     public Note getNoteById(Long id, String username) {
-        Note note = noteRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Note not found"));
-
-        if (!note.getUser().getUsername().equals(username)) {
-            throw new RuntimeException("You cannot edit this note!");
-        }
-        return note;
+        return noteRepository.findByIdAndUserUsername(id, username)
+                .orElseThrow(() -> new RuntimeException("Note not found or access denied"));
     }
 
+    public void deleteNote(Long noteId, String username) {
+        Note note = getNoteById(noteId, username);
+        noteRepository.delete(note);
+    }
 
     public void updateNote(Long id, String username, String newTitle, String newContent) {
         Note note = getNoteById(id, username);

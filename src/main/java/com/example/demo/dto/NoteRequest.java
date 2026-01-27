@@ -10,7 +10,7 @@ public class NoteRequest {
     @NotBlank(message = "Content is required")
     private String content;
 
-    // Getters & Setters
+
     public String getTitle() {
         return title;
     }
