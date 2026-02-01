@@ -25,10 +25,15 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
                 .authorizeHttpRequests(auth -> auth
+
                         .requestMatchers("/css/**", "/js/**", "/images/**", "/webjars/**", "/error").permitAll()
+
                         .requestMatchers("/login", "/register", "/access-denied").permitAll()
+
                         .requestMatchers("/admin/**").hasRole("ADMIN")
+
                         .requestMatchers("/notes/**", "/user/**").hasAnyRole("USER", "ADMIN")
+
                         .anyRequest().authenticated()
                 )
 
@@ -42,7 +47,6 @@ public class SecurityConfig {
                 .exceptionHandling(exception -> exception
                         .accessDeniedPage("/access-denied")
                 )
-
 
                 .logout(logout -> logout
                         .logoutUrl("/logout")

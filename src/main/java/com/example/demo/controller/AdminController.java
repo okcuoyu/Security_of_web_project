@@ -4,6 +4,8 @@ import com.example.demo.service.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -16,14 +18,22 @@ public class AdminController {
         this.userService = userService;
     }
 
+
+    @GetMapping("/home")
+    public String adminDashboard() {
+        return "admin/home";
+    }
+
+
     @GetMapping("/users")
     public String listUsers(Model model) {
         model.addAttribute("users", userService.getAllUsers());
         return "admin/users";
     }
 
-    @org.springframework.web.bind.annotation.PostMapping("/users/{id}/delete")
-    public String deleteUser(@org.springframework.web.bind.annotation.PathVariable Long id) {
+
+    @PostMapping("/users/{id}/delete")
+    public String deleteUser(@PathVariable Long id) {
         userService.deleteUser(id);
         return "redirect:/admin/users";
     }

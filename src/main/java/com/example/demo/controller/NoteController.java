@@ -2,8 +2,10 @@ package com.example.demo.controller;
 
 import com.example.demo.model.Note;
 import com.example.demo.service.NoteService;
+import jakarta.validation.constraints.Min; // EKLENDİ: En az kaç olacağını belirler
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.annotation.Validated; // EKLENDİ: Kontrolü açar
 import org.springframework.web.bind.annotation.*;
 
 import java.security.Principal;
@@ -11,6 +13,7 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/notes")
+@Validated
 public class NoteController {
 
     private final NoteService noteService;
@@ -37,9 +40,10 @@ public class NoteController {
         return "redirect:/notes";
     }
 
-
+    // Silme İşlemi
     @PostMapping("/{id}/delete")
-    public String deleteNote(@PathVariable Long id, Principal principal) {
+    public String deleteNote(@PathVariable @Min(value = 1, message = "ID negatif olamaz!") Long id,
+                             Principal principal) {
         try {
             noteService.deleteNote(id, principal.getName());
             return "redirect:/notes";
@@ -48,9 +52,11 @@ public class NoteController {
         }
     }
 
-
+    // Düzenleme Sayfası
     @GetMapping("/{id}/edit")
-    public String showEditForm(@PathVariable Long id, Model model, Principal principal) {
+    public String showEditForm(@PathVariable @Min(1) Long id,
+                               Model model,
+                               Principal principal) {
         try {
             Note note = noteService.getNoteById(id, principal.getName());
 
@@ -65,9 +71,9 @@ public class NoteController {
         }
     }
 
-
+    // Güncelleme İşlemi ️
     @PostMapping("/{id}/update")
-    public String updateNote(@PathVariable Long id,
+    public String updateNote(@PathVariable @Min(1) Long id,
                              @RequestParam String title,
                              @RequestParam String content,
                              Principal principal) {

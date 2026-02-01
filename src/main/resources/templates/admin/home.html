@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <style>
+        .admin-panel {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .admin-btn {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 10px;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+
+        .admin-btn:hover {
+            background-color: #555;
+        }
+
+        .logout-btn {
+            background-color: #c0392b;
+        }
+    </style>
+</head>
+<body>
+
+<div class="admin-panel">
+    <h1>👑 Admin Dashboard</h1>
+    <p>Welcome, Administrator. What would you like to do?</p>
+
+    <a th:href="@{/admin/users}" class="admin-btn">👥 Manage Users</a>
+
+    <form th:action="@{/logout}" method="post" style="display: inline;">
+        <button type="submit" class="admin-btn logout-btn">🚪 Logout</button>
+    </form>
+</div>
+
+</body>
+</html>

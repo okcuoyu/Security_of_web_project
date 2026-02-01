@@ -10,11 +10,11 @@ public class Note {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    // @NotBlank sildik (Kütüphane hatası riskine karşı)
+
     @Column(nullable = false)
     private String title;
 
-    // @NotBlank sildik ve uzun yazılar için TEXT ayarı ekledik
+
     @Column(nullable = false, columnDefinition = "TEXT")
     private String content;
 

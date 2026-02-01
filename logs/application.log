@@ -1,0 +1,298 @@
+2026-02-01T21:18:39.512+01:00  INFO 18468 --- [main] com.example.demo.Lab10Application        : Starting Lab10Application using Java 21.0.7 with PID 18468 (C:\Users\Yusuf\Desktop\demo\target\classes started by Yusuf in C:\Users\Yusuf\Desktop\demo)
+2026-02-01T21:18:39.521+01:00  INFO 18468 --- [main] com.example.demo.Lab10Application        : No active profile set, falling back to 1 default profile: "default"
+2026-02-01T21:18:40.071+01:00  INFO 18468 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-01T21:18:40.108+01:00  INFO 18468 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39 ms. Found 2 JPA repository interfaces.
+2026-02-01T21:18:40.560+01:00  INFO 18468 --- [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-02-01T21:18:40.581+01:00  INFO 18468 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-01T21:18:40.583+01:00  INFO 18468 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
+2026-02-01T21:18:40.643+01:00  INFO 18468 --- [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1072 ms
+2026-02-01T21:18:40.949+01:00  INFO 18468 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-02-01T21:18:41.029+01:00  INFO 18468 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@9d3d54e
+2026-02-01T21:18:41.029+01:00  INFO 18468 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-02-01T21:18:41.049+01:00  INFO 18468 --- [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:sqlite:lab10.db (SQLite 3.47)
+2026-02-01T21:18:41.089+01:00  INFO 18468 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.023s)
+2026-02-01T21:18:41.089+01:00  INFO 18468 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "main": 1
+2026-02-01T21:18:41.108+01:00  INFO 18468 --- [main] o.f.core.internal.command.DbMigrate      : Schema "main" is up to date. No migration necessary.
+2026-02-01T21:18:41.173+01:00  INFO 18468 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-01T21:18:41.208+01:00  INFO 18468 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.8.Final
+2026-02-01T21:18:41.583+01:00  INFO 18468 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-01T21:18:41.664+01:00  INFO 18468 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlite:lab10.db]
+	Database driver: SQLite JDBC
+	Database dialect: SQLiteDialect
+	Database version: 3.47.1
+	Default catalog/schema: undefined/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: SERIALIZABLE [default SERIALIZABLE]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-01T21:18:42.588+01:00  INFO 18468 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-01T21:18:42.632+01:00  INFO 18468 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-01T21:18:42.705+01:00  INFO 18468 --- [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-01T21:18:42.929+01:00  WARN 18468 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-01T21:18:43.007+01:00  INFO 18468 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2026-02-01T21:18:43.423+01:00  INFO 18468 --- [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-02-01T21:18:43.428+01:00  INFO 18468 --- [main] com.example.demo.Lab10Application        : Started Lab10Application in 4.376 seconds (process running for 4.786)
+2026-02-01T21:18:43.480+01:00  INFO 18468 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-01T21:18:43.480+01:00  INFO 18468 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-02-01T21:18:43.481+01:00  INFO 18468 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-02-01T21:19:30.644+01:00  WARN 18468 --- [http-nio-8080-exec-3] c.e.demo.security.AuthenticationEvents   : Failed login attempt for user: yusufenes. Reason: Bad credentials
+2026-02-01T21:20:36.408+01:00  WARN 18468 --- [http-nio-8080-exec-5] c.e.demo.security.AuthenticationEvents   : Unauthorized access attempt! User 'user1' tried to access a protected resource.
+2026-02-01T21:40:42.176+01:00  INFO 18468 --- [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-01T21:40:42.187+01:00  INFO 18468 --- [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-02-01T21:40:42.191+01:00  INFO 18468 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-01T21:40:42.193+01:00  INFO 18468 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-02-01T21:40:42.196+01:00  INFO 18468 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-02-01T21:40:50.673+01:00  INFO 3688 --- [main] com.example.demo.Lab10Application        : Starting Lab10Application using Java 21.0.7 with PID 3688 (C:\Users\Yusuf\Desktop\demo\target\classes started by Yusuf in C:\Users\Yusuf\Desktop\demo)
+2026-02-01T21:40:50.676+01:00  INFO 3688 --- [main] com.example.demo.Lab10Application        : No active profile set, falling back to 1 default profile: "default"
+2026-02-01T21:40:51.102+01:00  INFO 3688 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-01T21:40:51.142+01:00  INFO 3688 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 2 JPA repository interfaces.
+2026-02-01T21:40:51.530+01:00  INFO 3688 --- [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-02-01T21:40:51.558+01:00  INFO 3688 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-01T21:40:51.558+01:00  INFO 3688 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
+2026-02-01T21:40:51.607+01:00  INFO 3688 --- [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 900 ms
+2026-02-01T21:40:51.871+01:00  INFO 3688 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-02-01T21:40:51.944+01:00  INFO 3688 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@9a9aa68
+2026-02-01T21:40:51.947+01:00  INFO 3688 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-02-01T21:40:51.963+01:00  INFO 3688 --- [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:sqlite:lab10.db (SQLite 3.47)
+2026-02-01T21:40:51.994+01:00  INFO 3688 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.014s)
+2026-02-01T21:40:52.000+01:00  INFO 3688 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "main": 1
+2026-02-01T21:40:52.002+01:00  INFO 3688 --- [main] o.f.core.internal.command.DbMigrate      : Schema "main" is up to date. No migration necessary.
+2026-02-01T21:40:52.061+01:00  INFO 3688 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-01T21:40:52.118+01:00  INFO 3688 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.8.Final
+2026-02-01T21:40:52.529+01:00  INFO 3688 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-01T21:40:52.593+01:00  INFO 3688 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlite:lab10.db]
+	Database driver: SQLite JDBC
+	Database dialect: SQLiteDialect
+	Database version: 3.47.1
+	Default catalog/schema: undefined/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: SERIALIZABLE [default SERIALIZABLE]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-01T21:40:53.376+01:00  INFO 3688 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-01T21:40:53.416+01:00  INFO 3688 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-01T21:40:53.506+01:00  INFO 3688 --- [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-01T21:40:53.748+01:00  WARN 3688 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-01T21:40:53.826+01:00  INFO 3688 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2026-02-01T21:40:54.216+01:00  INFO 3688 --- [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-02-01T21:40:54.220+01:00  INFO 3688 --- [main] com.example.demo.Lab10Application        : Started Lab10Application in 3.883 seconds (process running for 4.155)
+2026-02-01T21:40:58.348+01:00  INFO 3688 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-01T21:40:58.349+01:00  INFO 3688 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-02-01T21:40:58.350+01:00  INFO 3688 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-02-01T21:43:18.128+01:00  INFO 3688 --- [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-01T21:43:18.135+01:00  INFO 3688 --- [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-02-01T21:43:18.139+01:00  INFO 3688 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-01T21:43:18.141+01:00  INFO 3688 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-02-01T21:43:18.142+01:00  INFO 3688 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-02-01T21:43:23.842+01:00  INFO 24516 --- [main] com.example.demo.Lab10Application        : Starting Lab10Application using Java 21.0.7 with PID 24516 (C:\Users\Yusuf\Desktop\demo\target\classes started by Yusuf in C:\Users\Yusuf\Desktop\demo)
+2026-02-01T21:43:23.845+01:00  INFO 24516 --- [main] com.example.demo.Lab10Application        : No active profile set, falling back to 1 default profile: "default"
+2026-02-01T21:43:24.348+01:00  INFO 24516 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-01T21:43:24.408+01:00  INFO 24516 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52 ms. Found 2 JPA repository interfaces.
+2026-02-01T21:43:24.820+01:00  INFO 24516 --- [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-02-01T21:43:24.833+01:00  INFO 24516 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-01T21:43:24.833+01:00  INFO 24516 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
+2026-02-01T21:43:24.873+01:00  INFO 24516 --- [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 998 ms
+2026-02-01T21:43:25.173+01:00  INFO 24516 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-02-01T21:43:25.252+01:00  INFO 24516 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@9a9aa68
+2026-02-01T21:43:25.255+01:00  INFO 24516 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-02-01T21:43:25.271+01:00  INFO 24516 --- [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:sqlite:lab10.db (SQLite 3.47)
+2026-02-01T21:43:25.302+01:00  INFO 24516 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.014s)
+2026-02-01T21:43:25.308+01:00  INFO 24516 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "main": 1
+2026-02-01T21:43:25.314+01:00  INFO 24516 --- [main] o.f.core.internal.command.DbMigrate      : Schema "main" is up to date. No migration necessary.
+2026-02-01T21:43:25.372+01:00  INFO 24516 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-01T21:43:25.417+01:00  INFO 24516 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.8.Final
+2026-02-01T21:43:25.955+01:00  INFO 24516 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-01T21:43:26.019+01:00  INFO 24516 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlite:lab10.db]
+	Database driver: SQLite JDBC
+	Database dialect: SQLiteDialect
+	Database version: 3.47.1
+	Default catalog/schema: undefined/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: SERIALIZABLE [default SERIALIZABLE]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-01T21:43:26.608+01:00  INFO 24516 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-01T21:43:26.637+01:00  INFO 24516 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-01T21:43:26.712+01:00  INFO 24516 --- [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-01T21:43:26.954+01:00  WARN 24516 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-01T21:43:27.022+01:00  INFO 24516 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2026-02-01T21:43:27.474+01:00  INFO 24516 --- [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-02-01T21:43:27.481+01:00  INFO 24516 --- [main] com.example.demo.Lab10Application        : Started Lab10Application in 3.99 seconds (process running for 4.309)
+2026-02-01T21:43:27.525+01:00  INFO 24516 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-01T21:43:27.526+01:00  INFO 24516 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-02-01T21:43:27.527+01:00  INFO 24516 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-02-01T21:51:36.535+01:00  WARN 24516 --- [http-nio-8080-exec-9] c.e.demo.security.AuthenticationEvents   : Unauthorized access attempt! User 'user1' tried to access a protected resource.
+2026-02-01T22:07:29.302+01:00  INFO 13996 --- [main] com.example.demo.Lab10Application        : Starting Lab10Application using Java 25.0.1 with PID 13996 (C:\Users\Yusuf\Desktop\demo\target\classes started by Yusuf in C:\Users\Yusuf\Desktop\demo)
+2026-02-01T22:07:29.305+01:00  INFO 13996 --- [main] com.example.demo.Lab10Application        : No active profile set, falling back to 1 default profile: "default"
+2026-02-01T22:07:29.836+01:00  INFO 13996 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-01T22:07:29.883+01:00  INFO 13996 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40 ms. Found 2 JPA repository interfaces.
+2026-02-01T22:07:30.228+01:00  INFO 13996 --- [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-02-01T22:07:30.237+01:00  INFO 13996 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-01T22:07:30.237+01:00  INFO 13996 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
+2026-02-01T22:07:30.264+01:00  INFO 13996 --- [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 927 ms
+2026-02-01T22:07:30.493+01:00  INFO 13996 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-02-01T22:07:30.636+01:00  INFO 13996 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@79f5a6ed
+2026-02-01T22:07:30.637+01:00  INFO 13996 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-02-01T22:07:30.647+01:00  INFO 13996 --- [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:sqlite:lab10.db (SQLite 3.47)
+2026-02-01T22:07:30.671+01:00  INFO 13996 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.010s)
+2026-02-01T22:07:30.675+01:00  INFO 13996 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "main": 1
+2026-02-01T22:07:30.677+01:00  INFO 13996 --- [main] o.f.core.internal.command.DbMigrate      : Schema "main" is up to date. No migration necessary.
+2026-02-01T22:07:30.723+01:00  INFO 13996 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-01T22:07:30.761+01:00  INFO 13996 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.8.Final
+2026-02-01T22:07:31.073+01:00  INFO 13996 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-01T22:07:31.124+01:00  INFO 13996 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlite:lab10.db]
+	Database driver: SQLite JDBC
+	Database dialect: SQLiteDialect
+	Database version: 3.47.1
+	Default catalog/schema: undefined/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: SERIALIZABLE [default SERIALIZABLE]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-01T22:07:31.681+01:00  INFO 13996 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-01T22:07:31.712+01:00  INFO 13996 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-01T22:07:31.769+01:00  INFO 13996 --- [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-01T22:07:31.953+01:00  WARN 13996 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-01T22:07:32.000+01:00  INFO 13996 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2026-02-01T22:07:32.336+01:00  WARN 13996 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-02-01T22:07:32.337+01:00  INFO 13996 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-01T22:07:32.342+01:00  INFO 13996 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-02-01T22:07:32.344+01:00  INFO 13996 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-02-01T22:07:32.352+01:00  INFO 13996 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-02-01T22:07:32.364+01:00 ERROR 13996 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2026-02-01T22:07:42.122+01:00  INFO 24516 --- [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-01T22:07:42.130+01:00  INFO 24516 --- [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-02-01T22:07:42.133+01:00  INFO 24516 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-01T22:07:42.135+01:00  INFO 24516 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-02-01T22:07:42.136+01:00  INFO 24516 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-02-01T22:28:59.241+01:00  INFO 30248 --- [main] com.example.demo.Lab10Application        : Starting Lab10Application using Java 21.0.7 with PID 30248 (C:\Users\Yusuf\Desktop\demo\target\classes started by Yusuf in C:\Users\Yusuf\Desktop\demo)
+2026-02-01T22:28:59.243+01:00  INFO 30248 --- [main] com.example.demo.Lab10Application        : No active profile set, falling back to 1 default profile: "default"
+2026-02-01T22:28:59.648+01:00  INFO 30248 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-01T22:28:59.700+01:00  INFO 30248 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 47 ms. Found 2 JPA repository interfaces.
+2026-02-01T22:29:00.066+01:00  INFO 30248 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-02-01T22:29:00.075+01:00  INFO 30248 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-01T22:29:00.075+01:00  INFO 30248 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-02-01T22:29:00.118+01:00  INFO 30248 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-02-01T22:29:00.119+01:00  INFO 30248 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 844 ms
+2026-02-01T22:29:00.218+01:00  INFO 30248 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-01T22:29:00.256+01:00  INFO 30248 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2026-02-01T22:29:00.281+01:00  INFO 30248 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-02-01T22:29:00.426+01:00  INFO 30248 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-01T22:29:00.446+01:00  INFO 30248 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-02-01T22:29:00.523+01:00  INFO 30248 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@56b1e527
+2026-02-01T22:29:00.527+01:00  INFO 30248 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-02-01T22:29:01.071+01:00  INFO 30248 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-01T22:29:01.096+01:00  INFO 30248 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-01T22:29:01.351+01:00  WARN 30248 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-01T22:29:01.549+01:00  INFO 30248 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6dbdbb69, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@576a8b00, org.springframework.security.web.context.SecurityContextHolderFilter@67730dab, org.springframework.security.web.header.HeaderWriterFilter@2e51ede1, org.springframework.web.filter.CorsFilter@1d988297, org.springframework.security.web.csrf.CsrfFilter@524c3e54, org.springframework.security.web.authentication.logout.LogoutFilter@6b468710, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@24fc9aa5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7c3ae369, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@496c6d94, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@116efe65, org.springframework.security.web.access.ExceptionTranslationFilter@3d00e981, org.springframework.security.web.access.intercept.AuthorizationFilter@24ce5d4c]
+2026-02-01T22:29:01.708+01:00  INFO 30248 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2026-02-01T22:29:01.714+01:00  INFO 30248 --- [main] com.example.demo.Lab10Application        : Started Lab10Application in 2.779 seconds (process running for 3.053)
+2026-02-01T22:29:26.370+01:00  INFO 30248 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-01T22:29:26.371+01:00  INFO 30248 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-02-01T22:29:26.372+01:00  INFO 30248 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-02-01T22:29:26.383+01:00  WARN 30248 --- [http-nio-8080-exec-1] o.s.w.s.h.HandlerMappingIntrospector     : Cache miss for REQUEST dispatch to '/user/home' (previous null). Performing CorsConfiguration lookup. This is logged once only at WARN level, and every time at TRACE.
+2026-02-01T22:29:26.397+01:00  WARN 30248 --- [http-nio-8080-exec-1] o.s.w.s.h.HandlerMappingIntrospector     : Cache miss for REQUEST dispatch to '/user/home' (previous null). Performing MatchableHandlerMapping lookup. This is logged once only at WARN level, and every time at TRACE.
+2026-02-01T22:29:34.009+01:00  WARN 30248 --- [http-nio-8080-exec-4] c.e.demo.security.AuthenticationEvents   : Failed login attempt for user: yusufenes. Reason: Bad credentials
+2026-02-01T22:29:41.956+01:00  WARN 30248 --- [http-nio-8080-exec-7] c.e.demo.security.AuthenticationEvents   : Failed login attempt for user: ysufenes. Reason: Bad credentials
+2026-02-01T22:30:21.552+01:00  INFO 15976 --- [main] com.example.demo.SecurityTests           : Starting SecurityTests using Java 25.0.1 with PID 15976 (started by Yusuf in C:\Users\Yusuf\Desktop\demo)
+2026-02-01T22:30:21.553+01:00  INFO 15976 --- [main] com.example.demo.SecurityTests           : No active profile set, falling back to 1 default profile: "default"
+2026-02-01T22:30:21.994+01:00  INFO 15976 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-01T22:30:22.034+01:00  INFO 15976 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34 ms. Found 2 JPA repository interfaces.
+2026-02-01T22:30:22.418+01:00  INFO 15976 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-01T22:30:22.470+01:00  INFO 15976 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2026-02-01T22:30:22.495+01:00  INFO 15976 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-02-01T22:30:22.694+01:00  INFO 15976 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-01T22:30:22.719+01:00  INFO 15976 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-02-01T22:30:22.911+01:00  INFO 15976 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@2b9e69fb
+2026-02-01T22:30:22.914+01:00  INFO 15976 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-02-01T22:30:23.533+01:00  INFO 15976 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-01T22:30:23.557+01:00  INFO 15976 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-01T22:30:23.919+01:00  WARN 15976 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-01T22:30:24.202+01:00  INFO 15976 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@729d1428, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@115924ba, org.springframework.security.web.context.SecurityContextHolderFilter@4d7fba20, org.springframework.security.web.header.HeaderWriterFilter@7b44e98e, org.springframework.web.filter.CorsFilter@1728d307, org.springframework.security.web.csrf.CsrfFilter@3958db82, org.springframework.security.web.authentication.logout.LogoutFilter@643a73fa, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@231c521e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@51d2d336, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@90c01ab, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@252d2ac0, org.springframework.security.web.access.ExceptionTranslationFilter@106b476a, org.springframework.security.web.access.intercept.AuthorizationFilter@74ab8610]
+2026-02-01T22:30:24.479+01:00  INFO 15976 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-02-01T22:30:24.480+01:00  INFO 15976 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-02-01T22:30:24.481+01:00  INFO 15976 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-02-01T22:30:24.503+01:00  INFO 15976 --- [main] com.example.demo.SecurityTests           : Started SecurityTests in 3.181 seconds (process running for 4.05)
+2026-02-01T22:30:24.947+01:00  WARN 15976 --- [main] o.s.w.s.h.HandlerMappingIntrospector     : Cache miss for REQUEST dispatch to '/login' (previous null). Performing CorsConfiguration lookup. This is logged once only at WARN level, and every time at TRACE.
+2026-02-01T22:30:25.193+01:00  INFO 15976 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-01T22:30:25.195+01:00  INFO 15976 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-02-01T22:30:25.197+01:00  INFO 15976 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-02-01T23:39:48.712+01:00  WARN 30248 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8m17s108ms617µs).
+2026-02-01T23:53:43.421+01:00  INFO 8516 --- [main] com.example.demo.SecurityTests           : Starting SecurityTests using Java 25.0.1 with PID 8516 (started by Yusuf in C:\Users\Yusuf\Desktop\demo)
+2026-02-01T23:53:43.422+01:00  INFO 8516 --- [main] com.example.demo.SecurityTests           : No active profile set, falling back to 1 default profile: "default"
+2026-02-01T23:53:43.870+01:00  INFO 8516 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-01T23:53:43.911+01:00  INFO 8516 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35 ms. Found 2 JPA repository interfaces.
+2026-02-01T23:53:44.265+01:00  INFO 8516 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-01T23:53:44.313+01:00  INFO 8516 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2026-02-01T23:53:44.337+01:00  INFO 8516 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-02-01T23:53:44.546+01:00  INFO 8516 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-01T23:53:44.571+01:00  INFO 8516 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-02-01T23:53:44.995+01:00  INFO 8516 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@2b9e69fb
+2026-02-01T23:53:44.997+01:00  INFO 8516 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-02-01T23:53:45.596+01:00  INFO 8516 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-01T23:53:45.622+01:00  INFO 8516 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-01T23:53:45.979+01:00  WARN 8516 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-01T23:53:46.286+01:00  INFO 8516 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@729d1428, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@115924ba, org.springframework.security.web.context.SecurityContextHolderFilter@4d7fba20, org.springframework.security.web.header.HeaderWriterFilter@7b44e98e, org.springframework.web.filter.CorsFilter@1728d307, org.springframework.security.web.csrf.CsrfFilter@3958db82, org.springframework.security.web.authentication.logout.LogoutFilter@643a73fa, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@231c521e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@51d2d336, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@90c01ab, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@252d2ac0, org.springframework.security.web.access.ExceptionTranslationFilter@106b476a, org.springframework.security.web.access.intercept.AuthorizationFilter@74ab8610]
+2026-02-01T23:53:46.551+01:00  INFO 8516 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-02-01T23:53:46.552+01:00  INFO 8516 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-02-01T23:53:46.552+01:00  INFO 8516 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-02-01T23:53:46.574+01:00  INFO 8516 --- [main] com.example.demo.SecurityTests           : Started SecurityTests in 3.396 seconds (process running for 9.819)
+2026-02-01T23:53:47.009+01:00  WARN 8516 --- [main] o.s.w.s.h.HandlerMappingIntrospector     : Cache miss for REQUEST dispatch to '/login' (previous null). Performing CorsConfiguration lookup. This is logged once only at WARN level, and every time at TRACE.
+2026-02-01T23:53:47.250+01:00  INFO 8516 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-01T23:53:47.252+01:00  INFO 8516 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-02-01T23:53:47.253+01:00  INFO 8516 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-02-01T23:55:03.230+01:00  INFO 11076 --- [main] com.example.demo.Lab10Application        : Starting Lab10Application using Java 21.0.7 with PID 11076 (C:\Users\Yusuf\Desktop\demo\target\classes started by Yusuf in C:\Users\Yusuf\Desktop\demo)
+2026-02-01T23:55:03.232+01:00  INFO 11076 --- [main] com.example.demo.Lab10Application        : No active profile set, falling back to 1 default profile: "default"
+2026-02-01T23:55:03.677+01:00  INFO 11076 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-01T23:55:03.731+01:00  INFO 11076 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 50 ms. Found 2 JPA repository interfaces.
+2026-02-01T23:55:04.207+01:00  INFO 11076 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-02-01T23:55:04.216+01:00  INFO 11076 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-01T23:55:04.217+01:00  INFO 11076 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-02-01T23:55:04.274+01:00  INFO 11076 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-02-01T23:55:04.274+01:00  INFO 11076 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1006 ms
+2026-02-01T23:55:04.389+01:00  INFO 11076 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-01T23:55:04.429+01:00  INFO 11076 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2026-02-01T23:55:04.455+01:00  INFO 11076 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-02-01T23:55:04.602+01:00  INFO 11076 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-01T23:55:04.627+01:00  INFO 11076 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-02-01T23:55:04.713+01:00  INFO 11076 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@17176b18
+2026-02-01T23:55:04.714+01:00  INFO 11076 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-02-01T23:55:05.397+01:00  INFO 11076 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-01T23:55:05.436+01:00  INFO 11076 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-01T23:55:05.838+01:00  WARN 11076 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-01T23:55:06.292+01:00  INFO 11076 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@705eb026, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@8de4206, org.springframework.security.web.context.SecurityContextHolderFilter@4a977146, org.springframework.security.web.header.HeaderWriterFilter@1f229c40, org.springframework.web.filter.CorsFilter@10f384a2, org.springframework.security.web.csrf.CsrfFilter@2eb9c7ad, org.springframework.security.web.authentication.logout.LogoutFilter@2f8b48c3, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5b2fc2c0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@402c415e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4e322108, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@57fae911, org.springframework.security.web.access.ExceptionTranslationFilter@451cef67, org.springframework.security.web.access.intercept.AuthorizationFilter@40ebb56]
+2026-02-01T23:55:06.566+01:00  INFO 11076 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2026-02-01T23:55:06.572+01:00  INFO 11076 --- [main] com.example.demo.Lab10Application        : Started Lab10Application in 3.733 seconds (process running for 4.047)
+2026-02-01T23:55:06.798+01:00  INFO 11076 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-01T23:55:06.799+01:00  INFO 11076 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-02-01T23:55:06.800+01:00  INFO 11076 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-02-01T23:55:06.814+01:00  WARN 11076 --- [http-nio-8080-exec-2] o.s.w.s.h.HandlerMappingIntrospector     : Cache miss for REQUEST dispatch to '/admin/home' (previous null). Performing CorsConfiguration lookup. This is logged once only at WARN level, and every time at TRACE.
+2026-02-01T23:55:06.834+01:00  WARN 11076 --- [http-nio-8080-exec-2] o.s.w.s.h.HandlerMappingIntrospector     : Cache miss for REQUEST dispatch to '/admin/home' (previous null). Performing MatchableHandlerMapping lookup. This is logged once only at WARN level, and every time at TRACE.
+2026-02-01T23:55:47.359+01:00  WARN 11076 --- [http-nio-8080-exec-1] c.e.demo.security.AuthenticationEvents   : Unauthorized access attempt! User 'user1' tried to access a protected resource.
