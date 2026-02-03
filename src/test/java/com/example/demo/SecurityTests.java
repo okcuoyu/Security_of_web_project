@@ -17,18 +17,17 @@ class SecurityTests {
     @Autowired
     private MockMvc mockMvc;
 
-    // SENARYO 1: Giriş yapmamış biri Admin sayfasına girmeye çalışıyor
     @Test
     void unauthenticatedUserCannotAccessAdminPage() throws Exception {
         mockMvc.perform(get("/admin/users"))
-                .andExpect(status().is3xxRedirection()) // Yönlendirme olmalı (302)
+                .andExpect(status().is3xxRedirection()) // Yönlendirme olmalı
                 .andExpect(redirectedUrlPattern("**/login")); // Login'e atmalı
     }
 
-    // SENARYO 2: Login sayfası herkese açık olmalı
+
     @Test
     void loginPageIsPublic() throws Exception {
         mockMvc.perform(get("/login"))
-                .andExpect(status().isOk()); // 200 OK dönmeli
+                .andExpect(status().isOk());
     }
 }
